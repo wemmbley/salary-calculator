@@ -5,6 +5,10 @@ class Calculator {
     }
 
     clickButtonCalculate() {
+        alert( '$' + this.calculateSalary() );
+    }
+
+    calculateRates() {
         const nodeRates = document.querySelectorAll('#calculator__rate');
         let rates = [];
 
@@ -17,6 +21,10 @@ class Calculator {
             rates.push(parseInt(el.value));
         }
 
+        return rates;
+    }
+
+    calculateWorkedDays() {
         const nodeWorkedDays = document.querySelectorAll('#calculator__worked');
         let workedDays = [];
 
@@ -29,19 +37,23 @@ class Calculator {
             workedDays.push(parseInt(el.value));
         }
 
-        // let statistic = {};
-        // rates.forEach((key, i) => statistic[key] = workedDays[i]);
-        // statistic['daysWorked'] = workedDays.reduce((a, b) => a + b, 0);
+        return workedDays;
+    }
 
-        let allWorkedDays = workedDays.reduce((a, b) => a + b, 0);
+    calculateSalary(round = true) {
+        const workedDays = this.calculateWorkedDays(),
+            rates = this.calculateRates(),
+            allWorkedDays = workedDays.reduce((a, b) => a + b, 0);
+
         let sum = 0;
 
         for(let i=0; i<workedDays.length; i++) {
-            sum += rates[i]/allWorkedDays*workedDays[i];
+            sum += rates[i] / allWorkedDays * workedDays[i];
         }
 
-        sum = Math.round(sum);
+        if(round)
+            sum = Math.round(sum);
 
-        alert(sum + '$');
+        return sum;
     }
 }
