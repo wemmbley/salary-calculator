@@ -1,0 +1,15 @@
+@import "converter";
+
+$basic-font: 'Roboto', sans-serif;
+
+body {
+  font-family: $basic-font;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  width: 970px;
+  margin-right: auto;
+  margin-left: auto;
+}
