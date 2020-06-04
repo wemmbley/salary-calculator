@@ -8,45 +8,30 @@
 </head>
 <body>
     <div class="wrapper">
-        <!--
-        1 - 250
-        2 - 300
-
-        21 рабочих
-
-        дата выхода: 13.06.2020
-
-        формула:
-        250\21*13 + 300\21*8 =
-
-        дано:
-        дата выхода
-        колво раб. дней
-        расширяемый блок{
-            ставка
-            дней отаботано
-        }
-
-        -->
         <div class="calculator">
-            <label>Дата выхода:</label>
-            <input type="text" name="calculator__job-start" id="calculator__job-start">
-            <label>Запомнить?</label>
-            <input type="checkbox" id="calculator__remember">
+            <label>
+                Дата выхода:
+                <input type="text" name="calculator__job-start" id="calculator__job-start">
+            </label>
+            <label>
+                Запомнить?
+                <input type="checkbox" id="calculator__remember">
+            </label>
             <div class="calculator">
                 <label>
                     Ставка:
-                    <input type="text" name="calculator__rate">
+                    <input type="text" name="calculator__rate" id="calculator__rate">
                 </label>
                 <label>
                     Отработано дней:
-                    <input type="text" name="calculator__worked">
+                    <input type="text" name="calculator__worked" id="calculator__worked">
                 </label>
             </div>
         </div>
         <p><button id="add-rate">Добавить ставку</button></p>
-        <p><button>Рассчитать</button></p>
+        <p><button id="calculate">Рассчитать</button></p>
     </div>
+    <script src="js/calculator.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/main.js"></script>
 </body>
