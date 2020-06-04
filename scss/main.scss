@@ -1,15 +1,55 @@
-@import "converter";
-
 $basic-font: 'Roboto', sans-serif;
 
-body {
+$soft-blue: #19243a;
+$soft-red: #f54e48;
+$lighter-red-1: #f68b83;
+$lighter-red-2: #f8bdad;
+$lighter-red-3: #f8d1b4;
+
+@import "converter";
+
+body{
   font-family: $basic-font;
   margin: 0;
   padding: 0;
+  background: $soft-blue;
+  color: $lighter-red-3;
 }
 
 .wrapper{
-  width: 970px;
   margin-right: auto;
-  margin-left: auto;
+  margin-left:  auto;
+  max-width: 960px;
+  padding-right: 10px;
+  padding-left:  10px;
+}
+
+button{
+  color: $lighter-red-3;
+  background: none;
+  cursor: pointer;
+  border: 1px solid $lighter-red-3;
+  width: 200px;
+  height: 30px;
+  transition: 400ms ease;
+  &:focus{
+    outline: none;
+    border: 1px solid $lighter-red-3;
+  }
+  &:hover{
+    transition: 400ms ease;
+    background: $lighter-red-3;
+    color: black;
+  }
+}
+
+input{
+  background: none;
+  border: 0;
+  border-bottom: 1px solid $lighter-red-3;
+  color: $lighter-red-3;
+  transition: 400ms ease;
+  &:focus{
+    outline: none;
+  }
 }

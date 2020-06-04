@@ -41,10 +41,10 @@ class Counter {
     }
 
     createCalculatorBlock() {
-        const divCalculator = document.querySelector('.calculator');
+        const divCalculator = document.querySelector('.calculator__inputs');
 
         const divCreateCalculator = document.createElement("div");
-        divCreateCalculator.classList.add('calculator');
+        divCreateCalculator.classList.add('calculator__inputs-block');
 
         const labelRate = document.createElement("label");
         labelRate.textContent = 'Ставка:';
@@ -66,6 +66,6 @@ class Counter {
         labelWorkedDays.append(inputWorkedDays);
         divCreateCalculator.append(labelWorkedDays);
 
-        divCalculator.after(divCreateCalculator);
+        divCalculator.append(divCreateCalculator);
     }
 }
