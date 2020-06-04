@@ -52,6 +52,7 @@ class Counter {
         const inputRate = document.createElement("input");
         inputRate.type = 'text';
         inputRate.name = 'calculator__rate';
+        inputRate.id = 'calculator__rate';
         labelRate.append(inputRate);
         divCreateCalculator.append(labelRate);
 
@@ -61,9 +62,10 @@ class Counter {
         const inputWorkedDays = document.createElement("input");
         inputWorkedDays.type = 'text';
         inputWorkedDays.name = 'calculator__worked';
+        inputWorkedDays.id = 'calculator__worked';
         labelWorkedDays.append(inputWorkedDays);
         divCreateCalculator.append(labelWorkedDays);
 
-        divCalculator.append(divCreateCalculator);
+        divCalculator.after(divCreateCalculator);
     }
 }
