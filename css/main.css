@@ -1,47 +1,47 @@
-.calculator {
+.wrapper {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+.wrapper .calculator {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  width: 450px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 20px 20px 45px #bcc4ca, -20px -20px 45px #feffff;
+  padding: 50px;
+  border-radius: 50px;
 }
-.calculator .calculator__title {
+.wrapper .calculator .calculator__title {
   display: flex;
   justify-content: center;
 }
-.calculator .calculator__inputs {
+.wrapper .calculator .calculator__inputs {
   display: flex;
   flex-direction: column;
 }
-.calculator .calculator__inputs .calculator__inputs-block {
+.wrapper .calculator .calculator__inputs .calculator__inputs-block {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
-.calculator .calculator__inputs .calculator__inputs-block label {
+.wrapper .calculator .calculator__inputs .calculator__inputs-block input {
+  margin-top: 20px;
+}
+.wrapper .calculator .calculator__controls {
   display: flex;
   justify-content: space-between;
-}
-.calculator .calculator__inputs .calculator__inputs-block label input {
-  width: 300px;
-}
-.calculator .calculator__controls {
-  display: flex;
-  justify-content: space-between;
-}
-.calculator .calculator__controls button:nth-child(2) {
-  border: 1px solid #f54e48;
-  color: #f54e48;
+  margin-top: 30px;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
-  background: #19243a;
-  color: #f8d1b4;
+  background: #dde7ee;
+  color: #525252;
 }
 
 .wrapper {
@@ -53,33 +53,39 @@ body {
 }
 
 button {
-  color: #f8d1b4;
-  background: none;
+  background: #dde7ee;
+  box-shadow: 20px 20px 60px #bcc4ca, -20px -20px 60px #feffff;
+  color: #525252;
   cursor: pointer;
-  border: 1px solid #f8d1b4;
-  width: 200px;
-  height: 30px;
+  border: 0;
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
   transition: 400ms ease;
 }
 button:focus {
   outline: none;
-  border: 1px solid #f8d1b4;
+  border: 0;
 }
 button:hover {
   transition: 400ms ease;
-  background: #f8d1b4;
-  color: black;
+  background: linear-gradient(145deg, #c7d0d6, #ecf7ff);
+  box-shadow: 20px 20px 60px #bcc4ca, -20px -20px 60px #feffff;
 }
 
 input {
-  background: none;
+  background: #dde7ee;
+  box-shadow: 20px 20px 60px #bcc4ca, -20px -20px 60px #feffff;
   border: 0;
-  border-bottom: 1px solid #f8d1b4;
-  color: #f8d1b4;
-  transition: 400ms ease;
+  height: 30px;
+  border-radius: 10px;
+  color: #525252;
+  padding: 15px 20px 15px 20px;
 }
 input:focus {
   outline: none;
+  background: linear-gradient(145deg, #c7d0d6, #ecf7ff);
+  box-shadow: 20px 20px 60px #bcc4ca, -20px -20px 60px #feffff;
 }
 
 /*# sourceMappingURL=main.css.map */

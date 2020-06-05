@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Converter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -21,19 +22,17 @@
             <p class="calculator__title">Калькулятор зарплаты</p>
             <div class="calculator__inputs">
                 <div class="calculator__inputs-block">
-                    <label>
-                        Ставка:
-                        <input type="text" name="calculator__rate" id="calculator__rate">
-                    </label>
-                    <label>
-                        Отработано дней:
-                        <input type="text" name="calculator__worked" id="calculator__worked">
-                    </label>
+                    <input type="text" name="calculator__rate" id="calculator__rate" placeholder="Ставка">
+                    <input type="text" name="calculator__worked" id="calculator__worked" placeholder="Отработано">
                 </div>
             </div>
             <div class="calculator__controls">
-                <p><button id="add-rate">Добавить ставку</button></p>
-                <p><button id="calculate">Рассчитать</button></p>
+                <button id="add-rate">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button id="calculate">
+                    <i class="fas fa-equals"></i>
+                </button>
             </div>
         </div>
     </div>
