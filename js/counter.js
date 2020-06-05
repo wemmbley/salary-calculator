@@ -46,25 +46,19 @@ class Counter {
         const divCreateCalculator = document.createElement("div");
         divCreateCalculator.classList.add('calculator__inputs-block');
 
-        const labelRate = document.createElement("label");
-        labelRate.textContent = 'Ставка:';
-
         const inputRate = document.createElement("input");
         inputRate.type = 'text';
         inputRate.name = 'calculator__rate';
         inputRate.id = 'calculator__rate';
-        labelRate.append(inputRate);
-        divCreateCalculator.append(labelRate);
-
-        const labelWorkedDays = document.createElement("label");
-        labelWorkedDays.textContent = 'Отработано дней:';
+        inputRate.placeholder = 'Ставка';
+        divCreateCalculator.append(inputRate);
 
         const inputWorkedDays = document.createElement("input");
         inputWorkedDays.type = 'text';
         inputWorkedDays.name = 'calculator__worked';
         inputWorkedDays.id = 'calculator__worked';
-        labelWorkedDays.append(inputWorkedDays);
-        divCreateCalculator.append(labelWorkedDays);
+        inputWorkedDays.placeholder = 'Отработано';
+        divCreateCalculator.append(inputWorkedDays);
 
         divCalculator.append(divCreateCalculator);
     }

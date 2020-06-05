@@ -1,19 +1,12 @@
-$basic-font: 'Roboto', sans-serif;
-
-$soft-blue: #19243a;
-$soft-red: #f54e48;
-$lighter-red-1: #f68b83;
-$lighter-red-2: #f8bdad;
-$lighter-red-3: #f8d1b4;
-
+@import "variables";
 @import "converter";
 
 body{
   font-family: $basic-font;
   margin: 0;
   padding: 0;
-  background: $soft-blue;
-  color: $lighter-red-3;
+  background: $main-color;
+  color: $text-color;
 }
 
 .wrapper{
@@ -25,31 +18,33 @@ body{
 }
 
 button{
-  color: $lighter-red-3;
-  background: none;
+  @include flatStyle;
+  color: $text-color;
   cursor: pointer;
-  border: 1px solid $lighter-red-3;
-  width: 200px;
-  height: 30px;
+  border: 0;
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
   transition: 400ms ease;
   &:focus{
     outline: none;
-    border: 1px solid $lighter-red-3;
+    border: 0;
   }
   &:hover{
     transition: 400ms ease;
-    background: $lighter-red-3;
-    color: black;
+    @include concaveStyle;
   }
 }
 
 input{
-  background: none;
+  @include flatStyle;
   border: 0;
-  border-bottom: 1px solid $lighter-red-3;
-  color: $lighter-red-3;
-  transition: 400ms ease;
+  height: 30px;
+  border-radius: 10px;
+  color: $text-color;
+  padding: 15px 20px 15px 20px;
   &:focus{
     outline: none;
+    @include concaveStyle;
   }
 }
